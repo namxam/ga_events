@@ -1,5 +1,5 @@
 module GaEvents
-  class Event < Struct.new(:category, :action, :label, :value)
+  Event = Struct.new(:category, :action, :label, :value) do
     def initialize(category, action, label = nil, value = nil)
       super
       GaEvents::List << self
